@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-project-page-js","path":"/projects/music-list-lastfm","result":{"pageContext":{"name":"music-list-lastfm","data":"# Music List Maker using LastFM-API\n\n### Install modules using\n```\npip install -r req.txt\n```\n\n### Run *app.py*\n"}}}

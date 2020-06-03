@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-project-page-js","path":"/projects/simple-race-game","result":{"pageContext":{"name":"simple-race-game","data":"# Simple Race Game\n\n### Install modules\n```\npip install -r req.txt\n```\n#### Run: race.py\n\n## Have FUN !\n"}}}

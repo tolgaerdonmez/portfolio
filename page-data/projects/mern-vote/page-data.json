@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-project-page-js","path":"/projects/mern-vote","result":{"pageContext":{"name":"mern-vote","data":"# mern-vote\nMERN Stack Voting App\n\ndev\n```\nyarn start:dev\n```\n\nprod\n```\nyarn start:prod\n```\n"}}}
