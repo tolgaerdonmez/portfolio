@@ -1,22 +1,28 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import "../sass/global.scss";
+import "../sass/index.scss";
+import "boxicons";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import SEO from "../components/seo";
+import Navbar from "../components/Navbar";
+import SocialIcons from "../components/SocialIcons";
 
 const IndexPage = () => (
-  <Layout>
+  <>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className="fullpage">
+      <header>
+        <img
+          src="https://pbs.twimg.com/profile_images/1190688223644790784/SkUH1Zev_400x400.jpg"
+          alt="profile."
+        />
+        <h1>Hi, I'm Tolga</h1>
+        <h2>I develop</h2>
+      </header>
+      <SocialIcons />
+      <Navbar />
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+  </>
+);
 
-export default IndexPage
+export default IndexPage;

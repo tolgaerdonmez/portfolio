@@ -1,0 +1,14 @@
+@import "variables";
+
+.social-icons {
+  box-icon {
+    fill: $white;
+    margin: 0 10px;
+    border-radius: 10px;
+    transition: 200ms ease;
+    &:hover {
+      fill: $background;
+      background-color: $white;
+    }
+  }
+}

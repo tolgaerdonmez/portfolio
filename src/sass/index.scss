@@ -1,0 +1,48 @@
+@import "variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.fullpage {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $background;
+  color: $white;
+  font-size: 2em;
+
+  header {
+    text-align: center;
+    * {
+      margin: 0;
+    }
+    h2 {
+      margin: 30px;
+    }
+    img {
+      width: auto;
+      height: 250px;
+
+      margin: 20px;
+
+      border-radius: 20px;
+    }
+  }
+
+  nav {
+    position: absolute;
+    bottom: 50px;
+  }
+
+  box-icon[name="chevrons-down"] {
+    fill: $white;
+  }
+}
