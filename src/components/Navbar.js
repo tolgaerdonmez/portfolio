@@ -9,7 +9,7 @@ function Navbar({ fullwidth }) {
         {fullwidth ? (
           <li>
             <Link to="/">
-              <box-icon name="left-arrow" type="solid" />
+              <i className="bx bxs-left-arrow"></i>
             </Link>
           </li>
         ) : null}

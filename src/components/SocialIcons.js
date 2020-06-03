@@ -9,21 +9,21 @@ function SocialIcons() {
         target="_blank"
         rel="noreferrer"
       >
-        <box-icon name="github" type="logo" size="50px"></box-icon>
+        <i className="bx bxl-github"></i>
       </a>
       <a
         href="https://twitter.com/tolgaerdonmez"
         target="_blank"
         rel="noreferrer"
       >
-        <box-icon name="twitter" type="logo" size="50px"></box-icon>
+        <i className="bx bxl-twitter"></i>
       </a>
       <a
         href="https://www.linkedin.com/in/ahmet-tolga-erd%C3%B6nmez-83a462175/"
         target="_blank"
         rel="noreferrer"
       >
-        <box-icon name="linkedin" type="logo" size="50px"></box-icon>
+        <i className="bx bxl-linkedin"></i>
       </a>
     </div>
   );

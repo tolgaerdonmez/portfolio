@@ -21,7 +21,7 @@ function ProjectCard(props) {
         {props.url ? (
           <a href={props.url} target="_blank" rel="noreferrer">
             See on github
-            <box-icon name="github" type="logo" size="25px"></box-icon>
+            <i className="bx bxl-github"></i>
           </a>
         ) : null}
         {props.extraFooter || null}

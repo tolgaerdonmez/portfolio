@@ -58,9 +58,9 @@ h1 {
       flex-direction: row;
       align-items: center;
 
-      box-icon {
-        fill: $white;
-        margin-left: 5px;
+      .bxl-github {
+        margin-left: 10px;
+        font-size: 2em;
       }
     }
   }

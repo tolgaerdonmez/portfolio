@@ -27,7 +27,7 @@ function ProjectsPage({ data }) {
           extraFooter={
             <a href="https://tweetstory.app" target="_blank" rel="noreferrer">
               Visit app website
-              <box-icon name="right-arrow" type="solid" size="25px"></box-icon>
+              <i className="bx bxs-right-arrow"></i>
             </a>
           }
         />

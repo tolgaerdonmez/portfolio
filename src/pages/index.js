@@ -1,7 +1,6 @@
 import React from "react";
 import "../sass/global.scss";
 import "../sass/index.scss";
-import "boxicons";
 
 import SEO from "../components/seo";
 import Navbar from "../components/Navbar";
