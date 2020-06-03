@@ -3,6 +3,7 @@ require("dotenv").config();
 const githubConfig = require("./config/github");
 
 module.exports = {
+  pathPrefix: "/portfolio",
   siteMetadata: {
     title: `Tolga Erdonmez`,
     description: `Tolga Erdonmez's Portfolio Website`,
