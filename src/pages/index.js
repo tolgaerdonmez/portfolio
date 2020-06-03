@@ -6,6 +6,7 @@ import "boxicons";
 import SEO from "../components/seo";
 import Navbar from "../components/Navbar";
 import SocialIcons from "../components/SocialIcons";
+import Typewriter from "../components/Typewriter";
 
 const IndexPage = () => (
   <>
@@ -17,7 +18,8 @@ const IndexPage = () => (
           alt="profile."
         />
         <h1>Hi, I'm Tolga</h1>
-        <h2>I develop</h2>
+        <Typewriter text="I develop" />
+        {/* <h2 className="typewriter">I develop</h2> */}
       </header>
       <SocialIcons />
       <Navbar />

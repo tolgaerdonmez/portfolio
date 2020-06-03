@@ -1,0 +1,30 @@
+@import "variables";
+
+.typewriter {
+  font-family: "Fira Code", monospace;
+  font-size: 1.4em;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 30px 0;
+  letter-spacing: 0.15em;
+}
+
+@each $variant in light, dark {
+  $color: if($variant == "light", $light, $dark);
+
+  .cursor-#{$variant} {
+    border-right: 0.15em solid $color;
+    animation: blink-caret-#{$variant} 0.75s step-end infinite;
+  }
+
+  /* typewriter cursor effect */
+  @keyframes blink-caret-#{$variant} {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: $color;
+    }
+  }
+}

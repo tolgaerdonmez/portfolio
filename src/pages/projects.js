@@ -3,12 +3,15 @@ import { graphql } from "gatsby";
 import "../sass/ProjectPage.scss";
 import Layout from "../components/Layout";
 import ProjectCard from "../components/ProjectCard";
+import Typewriter from "../components/Typewriter";
 
 function ProjectsPage({ data }) {
   const repositories = data.githubData.data.user.repositories.nodes;
   return (
     <Layout>
-      <h1>My Projects</h1>
+      <h1>
+        <Typewriter text="My Projects" onlyText cursorVariant="dark" />
+      </h1>
       <div className="projects-grid">
         <ProjectCard
           description={"Tweet Story"}
