@@ -1,67 +1,26 @@
 @import "variables";
-h1 {
-  text-align: center;
-  font-size: 2.5em;
-  letter-spacing: 0.05em;
-}
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
 
-.project-card {
-  display: flex;
-  flex-direction: column;
-
-  min-height: 150px;
-  margin: 20px;
-  padding: 20px 20px 10px 20px;
-
-  background-color: $rich-black-fogra;
-  color: $white;
-
-  border-radius: 10px;
-  box-shadow: 0 0 10px -5px $rich-black-fogra;
-
-  .project-card-body {
-    flex: 1 0 100px;
-    h4 {
-      margin: 0;
-      font-size: 1.3em;
-    }
-    h5 {
-      font-size: 1em;
-      span {
-        font-weight: 400;
-      }
+.project-page {
+  & > a {
+    color: $rich-black-fogra;
+    font-size: 2em;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background-color: $rich-black-fogra;
+      transition: transform 300ms ease;
+      transform: scaleX(0);
+      transform-origin: left;
+      z-index: 0;
     }
 
-    .project-card-extra-body {
-      & * {
-        color: $white;
-        fill: $white;
-      }
-    }
-  }
-
-  .project-card-footer {
-    flex: 1 0 50px;
-
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: flex-end;
-
-    a {
-      color: $white;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-
-      .bxl-github {
-        margin-left: 10px;
-        font-size: 2em;
-      }
+    &:hover::after {
+      transform: scaleX(100%);
     }
   }
 }

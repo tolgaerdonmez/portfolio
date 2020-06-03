@@ -1,10 +1,18 @@
 import React from "react";
+import { Link } from "gatsby";
 
 function ProjectCard(props) {
+  console.log(props.hasReadme);
   return (
     <div className="project-card">
       <div className="project-card-body">
-        <h4>{props.description}</h4>
+        <h4>
+          {props.name && props.hasReadme ? (
+            <Link to={"/projects/" + props.name}>{props.description}</Link>
+          ) : (
+            props.description
+          )}
+        </h4>
         {props.languages && props.languages.edges.length ? (
           <h5>
             Main Dev Language:{" "}

@@ -1,12 +1,16 @@
 import React from "react";
 import { graphql } from "gatsby";
-import "../sass/ProjectPage.scss";
-import Layout from "../components/Layout";
-import ProjectCard from "../components/ProjectCard";
-import Typewriter from "../components/Typewriter";
+import "../../sass/ProjectsPage.scss";
+import Layout from "../../components/Layout";
+import ProjectCard from "../../components/ProjectCard";
+import Typewriter from "../../components/Typewriter";
 
 function ProjectsPage({ data }) {
   const repositories = data.githubData.data.user.repositories.nodes;
+  const reposWithReadme = data.githubData.fields.projectPages.filter(
+    repo => repo.data !== null
+  );
+  console.log(reposWithReadme);
   return (
     <Layout>
       <h1>
@@ -32,15 +36,28 @@ function ProjectsPage({ data }) {
           }
         />
         {repositories.map((repo, key) => (
-          <ProjectCard key={key} {...repo} />
+          <ProjectCard
+            key={key}
+            {...repo}
+            hasReadme={
+              !!reposWithReadme.filter(x => x.name === repo.name).length
+            }
+          />
         ))}
       </div>
     </Layout>
   );
 }
+
 export const githubQuery = graphql`
   query {
     githubData {
+      fields {
+        projectPages {
+          name
+          data
+        }
+      }
       data {
         user {
           repositories {

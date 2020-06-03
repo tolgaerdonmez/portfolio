@@ -1,7 +1,15 @@
+const axios = require("axios").default;
+
 const username = process.env.GITHUB_USERNAME;
+
+const getReadme = repo =>
+  axios.get(
+    `https://raw.githubusercontent.com/${username}/${repo}/master/README.md`
+  );
 
 module.exports = {
   apiToken: process.env.GITHUB_API_TOKEN,
+  getReadme,
   username,
   query: `
   query ($number_of_repos: Int!, $username:String!) {

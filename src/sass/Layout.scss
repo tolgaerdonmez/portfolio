@@ -1,5 +1,12 @@
 @import "variables";
+@import "screens";
 
 .layout-container {
   margin: 50px 100px;
+}
+
+@media (max-width: $mobile) {
+  .layout-container {
+    margin: 50px 30px;
+  }
 }
