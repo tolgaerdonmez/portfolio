@@ -1,4 +1,6 @@
 @import "variables";
+@import "screens";
+
 h1 {
   text-align: center;
   font-size: 2.5em;
@@ -84,5 +86,17 @@ h1 {
         font-size: 2em;
       }
     }
+  }
+}
+
+@media (max-width: $medium) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: $mobile) {
+  .projects-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

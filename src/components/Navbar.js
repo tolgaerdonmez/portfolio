@@ -8,7 +8,9 @@ function Navbar({ fullwidth }) {
       <ul>
         {fullwidth ? (
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">
+              <i className="bx bxs-left-arrow"></i>
+            </Link>
           </li>
         ) : null}
         <li>

@@ -10,7 +10,11 @@ function ProjectPage({ pageContext }) {
     <Layout>
       <div className="project-page">
         <Link to="/projects">Return to Projects</Link>
-        <ReactMarkdown source={pageContext.data} escapeHtml={false} />
+        <ReactMarkdown
+          source={pageContext.data}
+          escapeHtml={false}
+          className="project-page-markdown"
+        />
       </div>
     </Layout>
   );

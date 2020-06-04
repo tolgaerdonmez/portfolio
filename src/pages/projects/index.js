@@ -7,9 +7,7 @@ import Typewriter from "../../components/Typewriter";
 
 function ProjectsPage({ data }) {
   const repositories = data.githubData.data.user.repositories.nodes;
-  const reposWithReadme = data.githubData.fields.projectPages.filter(
-    repo => repo.data !== null
-  );
+  const reposWithReadme = [].filter(repo => repo.data !== null);
   console.log(reposWithReadme);
   return (
     <Layout>
@@ -52,12 +50,6 @@ function ProjectsPage({ data }) {
 export const githubQuery = graphql`
   query {
     githubData {
-      fields {
-        projectPages {
-          name
-          data
-        }
-      }
       data {
         user {
           repositories {
